@@ -239,7 +239,6 @@ header h2 {
 }
 
 footer {
-  
   width: 100%;
   padding: 20px;
   text-align: center;
@@ -251,4 +250,22 @@ footer {
   font-size: 0.95em;
   opacity: 0.95;
   transition: background-color 0.3s ease;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+  header h2 { font-size: 2.2em; margin-top: 60px; }
+  .navbar { padding: 12px 0; }
+  .navbar .menu { gap: 12px; }
+  .breathing-box { width: 95%; padding: 24px 16px; }
+  .animation-circle { height: 260px; width: 260px; }
+}
+
+@media screen and (max-width: 600px) {
+  header h2 { font-size: 1.8em; margin-top: 40px; }
+  .breathing-box { width: 95%; padding: 20px 14px; }
+  .top-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .countdown-timer { font-size: 1.6em; }
+  .animation-circle { height: 220px; width: 220px; }
+  .control-btn { width: 100%; max-width: 320px; }
 }

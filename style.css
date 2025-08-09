@@ -254,6 +254,43 @@ progress::-webkit-progress-value {
   transition: width 0.3s ease;
 }
 
+#notes-list {
+  margin-top: 15px;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 600px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#notes-list li {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-text {
+  flex: 1;
+  font-size: 0.95em;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: 1em;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.delete-btn:hover {
+  color: red;
+}
 
 #note-input {
   width: 100%;
@@ -293,20 +330,31 @@ footer {
   transition: background-color 0.3s ease;
 }
 
+@media screen and (max-width: 900px) {
+  /* Tablet: tighten layout and reduce sizes */
+  header h2 { font-size: 2.2em; }
+  .navbar { padding: 12px 0; }
+  .navbar .menu { gap: 12px; }
+  main { grid-template-columns: 1fr; gap: 18px; }
+  .mood-box, .tracker-box, .notes-box { min-width: auto; width: 100%; }
+  .notes-box { max-width: 800px; }
+}
+
 @media screen and (max-width: 600px) {
+  /* Phone: single column and remove fixed widths */
   main {
     grid-template-columns: 1fr;
     gap: 15px;
   }
-  .page-wrapper {
-    padding: 15px;
-  }
-  header h2 {
-    font-size: 1.8em;
-  }
+  .page-wrapper { padding: 15px; }
+  header h2 { font-size: 1.8em; }
+
   .mood-box,
   .tracker-box,
   .notes-box {
+    min-width: auto;   /* remove wide min-widths that cause overflow */
     width: 100%;
   }
+  .notes-box { max-width: 100%; }
+  .mood-btn { width: 48px; height: 48px; font-size: 1.5em; }
 }

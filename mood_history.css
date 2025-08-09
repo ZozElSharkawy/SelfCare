@@ -156,19 +156,20 @@ header h2 {
 
 /* Mood list */
 .mood-list {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 20px;
+list-style: none;
+padding: 0;
+margin-bottom: 20px;
 }
 
 .mood-list li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 16px;
-  margin-bottom: 10px;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+gap: 12px;
+padding: 12px 16px;
+margin-bottom: 10px;
+background: rgba(255, 255, 255, 0.3);
+border-radius: 10px;
   font-size: 1.1em;
 }
 .mood-list li:hover{
@@ -176,36 +177,54 @@ header h2 {
 }
 
 .mood-emoji {
-  font-size: 1.4em;
+font-size: 1.4em;
   margin-right: 10px;
 }
 
 .mood-text {   
-  flex: 1;
+  flex: 0 1 auto;
 }
 
 .mood-date {
-  font-size: 0.9em;
+font-size: 0.9em;
   color: #555;
+  margin-left: auto;
 }
 
 /* Buttons */
-button,
+/* Page-level action button */
 .clear-btn {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 10px 20px;
-  font-size: 1em;
-  margin: 20px auto 0 auto;
-  display: block;
+background: var(--card-bg);
+border: 1px solid var(--border-color);
+border-radius: 8px;
+cursor: pointer;
+transition: all 0.3s ease;
+padding: 10px 20px;
+font-size: 1em;
+margin: 20px auto 0 auto;
+display: block;
 }
 
-button:hover,
 .clear-btn:hover {
   background-color: rgba(176, 172, 172, 0.4);
+}
+
+/* Small inline delete button inside list items */
+.mood-list .delete-btn {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: 1rem;
+  padding: 4px;
+  margin: 0 0 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  cursor: pointer;
+}
+.mood-list .delete-btn:hover {
+  color: red;
 }
 footer {
   width: 100%;
@@ -222,19 +241,42 @@ footer {
 }
 
 /* Responsive */
+@media screen and (max-width: 900px) {
+  /* Slightly smaller title and tighter layout on tablets */
+  header h2 {
+    font-size: 2.2em;
+    margin-top: 60px;
+  }
+  .navbar { padding: 12px 0; }
+  .navbar .menu { gap: 12px; }
+  .history-box { width: 95%; padding: 16px; }
+  .mood-list li { font-size: 1em; }
+  .mood-date { font-size: 0.85em; }
+}
+
 @media screen and (max-width: 600px) {
+  /* Stack content comfortably on phones */
   header h2 {
     font-size: 1.8em;
     margin-top: 40px;
   }
+  .navbar .menu li { margin: 0 16px; }
 
   .mood-list li {
     flex-direction: column;
     align-items: flex-start;
+    gap: 6px;
     font-size: 1em;
   }
-
   .mood-date {
+    margin-left: 0;
     font-size: 0.8em;
+  }
+  .mood-list .delete-btn {
+    align-self: flex-end;
+  }
+  .clear-btn {
+    width: 100%;
+    max-width: 320px;
   }
 }
