@@ -5,7 +5,6 @@ function startstop() {
   const durationSelect = document.getElementById("duration-select");
   const countdown = document.getElementById("countdown");
 
- 
   if (button.textContent.trim().toLowerCase() === "start") {
     button.textContent = "Stop";
     circle.classList.add("animate");
@@ -39,7 +38,6 @@ function startstop() {
         countdown.textContent = "00:00";
       }
     }, 1000);
-
   } else {
     button.textContent = "Start";
     circle.classList.remove("animate");
@@ -53,5 +51,5 @@ function startstop() {
 function formatTime(seconds) {
   const mins = Math.floor(seconds / 60);
   const secs = seconds % 60;
-  return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+  return `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
 }

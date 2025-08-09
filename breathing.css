@@ -11,7 +11,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -42,17 +42,29 @@ body {
 
 .circle1 {
   clip-path: circle(25% at 85% 15%);
-  background: radial-gradient(circle at center, #e8e4f3 0%, #d6d1e8 50%, rgba(214, 209, 232, 0.3) 80%, transparent 100%);
+  background: radial-gradient(
+    circle at center,
+    #e8e4f3 0%,
+    #d6d1e8 50%,
+    rgba(214, 209, 232, 0.3) 80%,
+    transparent 100%
+  );
 }
 
 .circle2 {
   clip-path: circle(20% at 15% 85%);
-  background: radial-gradient(circle at center, #f0ecf7 0%, #ddd8eb 45%, rgba(221, 216, 235, 0.4) 75%, transparent 100%);
+  background: radial-gradient(
+    circle at center,
+    #f0ecf7 0%,
+    #ddd8eb 45%,
+    rgba(221, 216, 235, 0.4) 75%,
+    transparent 100%
+  );
 }
 
 body::before,
 body::after {
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
@@ -65,15 +77,25 @@ body::after {
 
 body::before {
   clip-path: circle(18% at 25% 25%);
-  background: radial-gradient(circle at center, #ebe7f4 0%, #d9d4e7 40%, rgba(217, 212, 231, 0.5) 70%, transparent 100%);
+  background: radial-gradient(
+    circle at center,
+    #ebe7f4 0%,
+    #d9d4e7 40%,
+    rgba(217, 212, 231, 0.5) 70%,
+    transparent 100%
+  );
 }
 
 body::after {
   clip-path: circle(22% at 75% 75%);
-  background: radial-gradient(circle at center, #f2eff8 0%, #e5e1f1 48%, rgba(229, 225, 241, 0.4) 78%, transparent 100%);
+  background: radial-gradient(
+    circle at center,
+    #f2eff8 0%,
+    #e5e1f1 48%,
+    rgba(229, 225, 241, 0.4) 78%,
+    transparent 100%
+  );
 }
-
-
 
 /* Page title */
 header h2 {
@@ -107,18 +129,16 @@ header h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  
 }
-.navbar .menu li{
-    list-style: none;
-    margin: 0 40px;
+.navbar .menu li {
+  list-style: none;
+  margin: 0 40px;
 }
 .navbar .menu a {
   text-decoration: none;
   color: var(--text-color);
   font-size: 1em;
   transition: all 0.3s ease;
- 
 }
 
 .navbar .menu a:hover {
@@ -132,7 +152,6 @@ header h2 {
   border: 1px solid var(--border-color);
   padding: 5px;
 }
-
 
 /* Breathing Box */
 .breathing-box {
@@ -176,7 +195,6 @@ header h2 {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  
 }
 .duration-select {
   margin-bottom: 20px;
@@ -187,7 +205,6 @@ header h2 {
   background: var(--card-bg);
   color: var(--text-color);
 }
-
 
 /* Animated Circle Placeholder */
 .animation-circle {
@@ -208,19 +225,22 @@ header h2 {
 }
 
 @keyframes breathe {
-  0% { transform: scale(1); }                                
-  50% { transform: scale(1.4); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-
 
 #circle-text {
   text-align: center;
   font-size: 1.2em;
   color: #333;
 }
-
-
 
 .control-btn {
   display: block;
@@ -254,18 +274,49 @@ footer {
 
 /* Responsive */
 @media screen and (max-width: 900px) {
-  header h2 { font-size: 2.2em; margin-top: 60px; }
-  .navbar { padding: 12px 0; }
-  .navbar .menu { gap: 12px; }
-  .breathing-box { width: 95%; padding: 24px 16px; }
-  .animation-circle { height: 260px; width: 260px; }
+  header h2 {
+    font-size: 2.2em;
+    margin-top: 60px;
+  }
+  .navbar {
+    padding: 12px 0;
+  }
+  .navbar .menu {
+    gap: 12px;
+  }
+  .breathing-box {
+    width: 95%;
+    padding: 24px 16px;
+  }
+  .animation-circle {
+    height: 260px;
+    width: 260px;
+  }
 }
 
 @media screen and (max-width: 600px) {
-  header h2 { font-size: 1.8em; margin-top: 40px; }
-  .breathing-box { width: 95%; padding: 20px 14px; }
-  .top-row { flex-direction: column; align-items: flex-start; gap: 8px; }
-  .countdown-timer { font-size: 1.6em; }
-  .animation-circle { height: 220px; width: 220px; }
-  .control-btn { width: 100%; max-width: 320px; }
+  header h2 {
+    font-size: 1.8em;
+    margin-top: 40px;
+  }
+  .breathing-box {
+    width: 95%;
+    padding: 20px 14px;
+  }
+  .top-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .countdown-timer {
+    font-size: 1.6em;
+  }
+  .animation-circle {
+    height: 220px;
+    width: 220px;
+  }
+  .control-btn {
+    width: 100%;
+    max-width: 320px;
+  }
 }

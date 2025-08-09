@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="breathing.css"/>
-  <title>Breathing exercise</title>
-</head>
-<body>
-  <div class="page-wrapper">
-  <!-- Decorative background circles -->
-  <div class="circle1"></div>
-  <div class="circle2"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="breathing.css" />
+    <title>Breathing exercise</title>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- Decorative background circles -->
+      <div class="circle1"></div>
+      <div class="circle2"></div>
 
-  <header>
-    <h2 class="page-title">Breathing exercise</h2>
-    <nav class="navbar">
-            <ul class="menu">
-                <li><a href="index.html">Self care </a></li>
-                <li><a href="mood_history.html">Mood history</a></li>
-                <li><a href="breathing.html" class="active">Breathe exercise</a></li>
-                <li><a href="resources.html">Resources</a></li>
-            </ul>
+      <header>
+        <h2 class="page-title">Breathing exercise</h2>
+        <nav class="navbar">
+          <ul class="menu">
+            <li><a href="index.html">Self care </a></li>
+            <li><a href="mood_history.html">Mood history</a></li>
+            <li>
+              <a href="breathing.html" class="active">Breathe exercise</a>
+            </li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
         </nav>
-  </header>
+      </header>
 
+      <main class="breathing-box">
+        <div class="top-row">
+          <div class="duration">
+            <label for="duration-select">Session Length:</label>
+            <select id="duration-select" class="duration-select">
+              <option value="60">1 Minute</option>
+              <option value="180">3 Minutes</option>
+              <option value="300">5 Minutes</option>
+            </select>
+          </div>
 
-  <main class="breathing-box">
-  <div class="top-row">
-    <div class="duration">
-      <label for="duration-select">Session Length:</label>
-      <select id="duration-select" class="duration-select">
-        <option value="60">1 Minute</option>
-        <option value="180">3 Minutes</option>
-        <option value="300">5 Minutes</option>
-      </select>
+          <div id="countdown" class="countdown-timer">00:00</div>
+        </div>
+
+        <div class="animation-circle" id="animation-circle">
+          <span id="circle-text">Breathe</span>
+        </div>
+
+        <button id="start-stop-btn" class="control-btn" onclick="startstop()">
+          Start
+        </button>
+      </main>
     </div>
-  
-
-  <div id="countdown" class="countdown-timer">00:00</div>
-  </div>
-
-  <div class="animation-circle" id="animation-circle">
-    <span id="circle-text">Breathe</span>
-  </div>
-
-  <button id="start-stop-btn" class="control-btn" onclick="startstop()">Start</button>
-</main>
-
-
-  </div>
-  <footer>&copy; 2025 My Self-Care Space. All rights reserved.</footer>
-  <script src="breathing.js"></script>
-</body>
+    <footer>&copy; 2025 My Self-Care Space. All rights reserved.</footer>
+    <script src="breathing.js"></script>
+  </body>
 </html>

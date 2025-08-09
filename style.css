@@ -10,7 +10,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -56,7 +56,12 @@ q {
 
 .line {
   height: 3px;
-  background: linear-gradient(90deg, transparent, var(--text-color), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--text-color),
+    transparent
+  );
   margin: 20px auto;
   width: 80%;
   max-width: 800px;
@@ -170,10 +175,9 @@ main {
   transform: scale(1.2);
 }
 .mood-btn:hover {
-  background-color:  rgba(179, 162, 197, 0.288);
+  background-color: rgba(179, 162, 197, 0.288);
   border-radius: 50%;
 }
-
 
 .goals-list {
   display: flex;
@@ -235,8 +239,8 @@ main {
 }
 
 .goal-checkbox:checked ~ .goal-text {
-    text-decoration: line-through;
-    opacity: 0.6;
+  text-decoration: line-through;
+  opacity: 0.6;
 }
 progress {
   width: 100%;
@@ -302,7 +306,7 @@ progress::-webkit-progress-value {
   border-radius: 8px;
   box-sizing: border-box;
 }
-.submit-btn{
+.submit-btn {
   padding: 12px 24px;
   font-size: 1em;
   background-color: var(--card-bg);
@@ -332,12 +336,28 @@ footer {
 
 @media screen and (max-width: 900px) {
   /* Tablet: tighten layout and reduce sizes */
-  header h2 { font-size: 2.2em; }
-  .navbar { padding: 12px 0; }
-  .navbar .menu { gap: 12px; }
-  main { grid-template-columns: 1fr; gap: 18px; }
-  .mood-box, .tracker-box, .notes-box { min-width: auto; width: 100%; }
-  .notes-box { max-width: 800px; }
+  header h2 {
+    font-size: 2.2em;
+  }
+  .navbar {
+    padding: 12px 0;
+  }
+  .navbar .menu {
+    gap: 12px;
+  }
+  main {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .mood-box,
+  .tracker-box,
+  .notes-box {
+    min-width: auto;
+    width: 100%;
+  }
+  .notes-box {
+    max-width: 800px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -346,15 +366,25 @@ footer {
     grid-template-columns: 1fr;
     gap: 15px;
   }
-  .page-wrapper { padding: 15px; }
-  header h2 { font-size: 1.8em; }
+  .page-wrapper {
+    padding: 15px;
+  }
+  header h2 {
+    font-size: 1.8em;
+  }
 
   .mood-box,
   .tracker-box,
   .notes-box {
-    min-width: auto;   /* remove wide min-widths that cause overflow */
+    min-width: auto; /* remove wide min-widths that cause overflow */
     width: 100%;
   }
-  .notes-box { max-width: 100%; }
-  .mood-btn { width: 48px; height: 48px; font-size: 1.5em; }
+  .notes-box {
+    max-width: 100%;
+  }
+  .mood-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5em;
+  }
 }

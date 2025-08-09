@@ -1,84 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Self Care</title>
-</head>
-<body>
-  <div class="page-wrapper">
-    <header>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header>
         <h2 class="page-title">My Self-Care Space</h2>
-            <div class="q-wrap">
-        <q>
-            The only limit to our realization of tomorrow is our doubts of today.
-        </q>
-        <div class="line"></div>
-    </div>
+        <div class="q-wrap">
+          <q>
+            The only limit to our realization of tomorrow is our doubts of
+            today.
+          </q>
+          <div class="line"></div>
+        </div>
         <nav class="navbar">
-            <ul class="menu">
-                <li><a href="index.html" class="active">Self care </a></li>
-                <li><a href="mood_history.html">Mood history</a></li>
-                <li><a href="breathing.html">Breathe exercise</a></li>
-                <li><a href="resources.html">Resources</a></li>
-        
-            </ul>
+          <ul class="menu">
+            <li><a href="index.html" class="active">Self care </a></li>
+            <li><a href="mood_history.html">Mood history</a></li>
+            <li><a href="breathing.html">Breathe exercise</a></li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
         </nav>
-    </header>
+      </header>
 
-    <main>
+      <main>
         <div class="mood-box">
-            <h2 class="section-title">Mood</h2>
-            <p id="current-mood">How are you feeling today?</p>
-            <div class="mood-selector">
-                <button class="mood-btn" data-mood="happy">😊</button>
-                <button class="mood-btn" data-mood="neutral">😐</button>
-                <button class="mood-btn" data-mood="sad">😔</button>
-                <button class="mood-btn" data-mood="sleepy">😴</button>
-                <button class="mood-btn" data-mood="angry">😤</button>
-            </div>
+          <h2 class="section-title">Mood</h2>
+          <p id="current-mood">How are you feeling today?</p>
+          <div class="mood-selector">
+            <button class="mood-btn" data-mood="happy">😊</button>
+            <button class="mood-btn" data-mood="neutral">😐</button>
+            <button class="mood-btn" data-mood="sad">😔</button>
+            <button class="mood-btn" data-mood="sleepy">😴</button>
+            <button class="mood-btn" data-mood="angry">😤</button>
+          </div>
         </div>
 
         <div class="tracker-box">
-            <h2 class="section-title">Tracker</h2>
-            <div class="goals-list">
-                <label class="goal-item">
-                    <input type="checkbox" class="goal-checkbox">
-                    <span class="checkmark"></span>
-                    <span class="goal-text">Drink 8 glasses of water</span>
-                </label><br>
-                <label class="goal-item">
-                    <input type="checkbox" class="goal-checkbox">
-                    <span class="checkmark"></span>
-                    <span class="goal-text">Exercise for 30 minutes</span>
-                </label><br>
-                <label class="goal-item">
-                    <input type="checkbox" class="goal-checkbox">
-                    <span class="checkmark"></span>
-                    <span class="goal-text">Prayers</span>
-                </label><br>
-                <label class="goal-item">
-                    <input type="checkbox" class="goal-checkbox">
-                    <span class="checkmark"></span>
-                    <span class="goal-text">Yoga</span>
-                </label>
-            </div>
-            <progress id="goal-progress" value="0" max="4"></progress>
-
+          <h2 class="section-title">Tracker</h2>
+          <div class="goals-list">
+            <label class="goal-item">
+              <input type="checkbox" class="goal-checkbox" />
+              <span class="checkmark"></span>
+              <span class="goal-text">Drink 8 glasses of water</span> </label
+            ><br />
+            <label class="goal-item">
+              <input type="checkbox" class="goal-checkbox" />
+              <span class="checkmark"></span>
+              <span class="goal-text">Exercise for 30 minutes</span> </label
+            ><br />
+            <label class="goal-item">
+              <input type="checkbox" class="goal-checkbox" />
+              <span class="checkmark"></span>
+              <span class="goal-text">Prayers</span> </label
+            ><br />
+            <label class="goal-item">
+              <input type="checkbox" class="goal-checkbox" />
+              <span class="checkmark"></span>
+              <span class="goal-text">Yoga</span>
+            </label>
+          </div>
+          <progress id="goal-progress" value="0" max="4"></progress>
         </div>
-    </main>
+      </main>
 
-    <div class="notes-box">
+      <div class="notes-box">
         <h2 class="section-title">Notes</h2>
-        <input type="text" id="note-input" placeholder="What made you smile today?">
-    <button class="submit-btn">submit</button>
-     <ul id="notes-list"></ul>
-</div>
-    
-  </div>
+        <input
+          type="text"
+          id="note-input"
+          placeholder="What made you smile today?"
+        />
+        <button class="submit-btn">submit</button>
+        <ul id="notes-list"></ul>
+      </div>
+    </div>
 
-  <footer>&copy; 2025 My Self-Care Space. All rights reserved.</footer>
-  <script src="script.js"></script>
-</body>
+    <footer>&copy; 2025 My Self-Care Space. All rights reserved.</footer>
+    <script src="script.js"></script>
+  </body>
 </html>
