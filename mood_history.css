@@ -290,10 +290,6 @@ footer {
     font-size: 1.8em;
     margin-top: 40px;
   }
-  .navbar .menu li {
-    margin: 0 16px;
-  }
-
   .mood-list li {
     flex-direction: column;
     align-items: flex-start;
