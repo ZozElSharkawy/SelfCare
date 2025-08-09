@@ -30,3 +30,14 @@
       sessionStorage.setItem("moodHistory", JSON.stringify(history));
     });
   });
+
+  const checkboxes = document.querySelectorAll(".goal-checkbox");
+const progressBar = document.getElementById("goal-progress");
+
+checkboxes.forEach(cb => {
+  cb.addEventListener("change", () => {
+    let checkedCount = document.querySelectorAll(".goal-checkbox:checked").length;
+    progressBar.value = checkedCount;
+  });
+});
+
